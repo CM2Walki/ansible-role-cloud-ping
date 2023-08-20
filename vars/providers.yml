@@ -1,0 +1,97 @@
+---
+providers:
+#  DigitalOcean: (Speedtest domains have gone offline)
+#    data_centers:
+#      - { domain: "speedtest-nyc1.digitalocean.com", name: "nyc1" }
+#      - { domain: "speedtest-nyc2.digitalocean.com", name: "nyc2" }
+#      - { domain: "speedtest-nyc3.digitalocean.com", name: "nyc3" }
+#      - { domain: "speedtest-ams2.digitalocean.com", name: "ams2" }
+#      - { domain: "speedtest-ams3.digitalocean.com", name: "ams3" }
+#      - { domain: "speedtest-sfo1.digitalocean.com", name: "sfo1" }
+#      - { domain: "speedtest-sfo2.digitalocean.com", name: "sfo2" }
+#      - { domain: "speedtest-sgp1.digitalocean.com", name: "sgp1" }
+#      - { domain: "speedtest-lon1.digitalocean.com", name: "lon1" }
+#      - { domain: "speedtest-fra1.digitalocean.com", name: "fra1" }
+#      - { domain: "speedtest-tor1.digitalocean.com", name: "tor1" }
+#      - { domain: "speedtest-blr1.digitalocean.com", name: "blr1" }
+  Hetzner:
+    data_centers:
+      - { domain: "nbg.icmp.hetzner.com", name: "nbg1-dc3" }
+      - { domain: "fsn.icmp.hetzner.com", name: "fsn1-dc14" }
+      - { domain: "hel.icmp.hetzner.com", name: "hel1-dc2" }
+      - { domain: "ash.icmp.hetzner.com", name: "ash-dc1" }
+      - { domain: "hil.icmp.hetzner.com", name: "hil-dc1" }
+  Exoscale:
+    data_centers:
+      - { domain: "ping-times.sos-ch-gva-2.exo.io", name: "ch-gva-2" }
+      - { domain: "ping-times.sos-ch-dk-2.exo.io", name: "ch-dk-2" }
+      - { domain: "ping-times.sos-de-fra-1.exo.io", name: "de-fra-1" }
+      - { domain: "ping-times.sos-de-muc-1.exo.io", name: "de-muc-1" }
+      - { domain: "ping-times.sos-at-vie-1.exo.io", name: "at-vie-1" }
+      - { domain: "ping-times.sos-at-vie-2.exo.io", name: "at-vie-2" }
+      - { domain: "ping-times.sos-bg-sof-1.exo.io", name: "bg-sof-1" }
+  Linode:
+    data_centers:
+      - { domain: "speedtest.mumbai1.linode.com", name: "ap-west" }
+      - { domain: "speedtest.toronto1.linode.com", name: "ca-central" }
+      - { domain: "speedtest.syd1.linode.com", name: "ap-southeast" }
+      - { domain: "speedtest.washington.linode.com", name: "us-iad" }
+      - { domain: "speedtest.chicago.linode.com", name: "us-ord" }
+      - { domain: "speedtest.paris.linode.com", name: "fr-par" }
+      - { domain: "speedtest.dallas.linode.com", name: "us-central" }
+      - { domain: "speedtest.fremont.linode.com", name: "us-west" }
+      - { domain: "speedtest.atlanta.linode.com", name: "us-southeast" }
+      - { domain: "speedtest.newark.linode.com", name: "us-east" }
+      - { domain: "speedtest.london.linode.com", name: "eu-west" }
+      - { domain: "speedtest.singapore.linode.com", name: "ap-south" }
+      - { domain: "speedtest.frankfurt.linode.com", name: "eu-central" }
+      - { domain: "speedtest.tokyo2.linode.com", name: "ap-northeast" }
+  Vultr:
+    data_centers:
+      - { domain: "hnd-jp-ping.vultr.com", name: "hnd-jp" } 
+      - { domain: "sgp-ping.vultr.com", name: "sgp" }
+      - { domain: "syd-au-ping.vultr.com", name: "syd-au" }
+      - { domain: "fra-de-ping.vultr.com", name: "fra-de" }
+      - { domain: "ams-nl-ping.vultr.com", name: "ams-nl" }
+      - { domain: "lon-gb-ping.vultr.com", name: "lon-gb" }
+      - { domain: "par-fr-ping.vultr.com", name: "par-fr" }
+      - { domain: "wa-us-ping.vultr.com", name: "wa-us" }
+      - { domain: "sjo-ca-us-ping.vultr.com", name: "sjo-ca-us" }
+      - { domain: "lax-ca-us-ping.vultr.com", name: "lax-ca-us" }
+      - { domain: "il-us-ping.vultr.com", name: "il-us" }
+      - { domain: "tx-us-ping.vultr.com", name: "tx-us" }
+      - { domain: "nj-us-ping.vultr.com", name: "nj-us" }
+      - { domain: "ga-us-ping.vultr.com", name: "ga-us" }
+      - { domain: "fl-us-ping.vultr.com", name: "fl-us" }
+      - { domain: "jnb-za-ping.vultr.com", name: "jnb-za" }
+      - { domain: "blr-in-ping.vultr.com", name: "blr-in" }
+      - { domain: "del-in-ping.vultr.com", name: "del-in" }
+      - { domain: "bom-in-ping.vultr.com", name: "bom-in" }
+      - { domain: "osk-jp-ping.vultr.com", name: "osk-jp" }
+      - { domain: "sel-kor-ping.vultr.com", name: "sel-kor" }
+      - { domain: "tlv-il-ping.vultr.com", name: "tlv-il" }
+      - { domain: "mel-au-ping.vultr.com", name: "mel-au" }
+      - { domain: "mad-es-ping.vultr.com", name: "mad-es" }
+      - { domain: "man-uk-ping.vultr.com", name: "man-uk" }
+      - { domain: "sto-se-ping.vultr.com", name: "sto-se" }
+      - { domain: "waw-pl-ping.vultr.com", name: "waw-pl" }
+      - { domain: "hon-hi-us-ping.vultr.com", name: "hon-hi-us" }
+      - { domain: "mex-mx-ping.vultr.com", name: "mex-mx" }
+      - { domain: "tor-ca-ping.vultr.com", name: "tor-ca" }
+      - { domain: "scl-cl-ping.vultr.com", name: "scl-cl" }
+      - { domain: "sao-br-ping.vultr.com", name: "sao-br" }
+  OVHCloud:
+    data_centers:
+      - { domain: "fr-ovh-roubaix-02-10g.nperf.net", name: "fr-ovh-roubaix" }
+      - { domain: "fr-ovh-strasbourg-02-10g.nperf.net", name: "fr-ovh-strasbourg" }
+      - { domain: "ca-ovh-beauharnois-02-10g.nperf.net", name: "ca-ovh-beauharnois" }
+      - { domain: "fr-ovh-gravelines-02-10g.nperf.net", name: "fr-ovh-gravelines" }
+      - { domain: "gb-ovh-erith-01-10g.nperf.net", name: "gb-ovh-erith" }
+      - { domain: "de-ovh-limburg-01-10g.nperf.net", name: "de-ovh-limburg" }
+      - { domain: "pl-ovh-warsaw-01-10g.nperf.net", name: "pl-ovh-warsaw" }
+      - { domain: "au-ovh-sydney-01-10g.nperf.net", name: "au-ovh-sydney" }
+      - { domain: "sg-ovh-singapore-01-10g.nperf.net", name: "sg-ovh-singapore" }
+      - { domain: "us-ovh-hillsboro-01-10g.nperf.net", name: "us-ovh-hillsboro" }
+      - { domain: "us-ovh-vinthill-01-10g.nperf.net", name: "us-ovh-vinthill" }
+      - { domain: "in-ovh-mumbai-01-10g-1.nperf.net", name: "in-ovh-mumbai" }
+

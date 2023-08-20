@@ -1,0 +1,44 @@
+---
+- name: Include config
+  include_vars:
+    file: config.yml
+
+- name: Include providers
+  include_vars:
+    file: providers.yml
+
+- name: Use filtered provider list
+  set_fact:
+    provider_dict: "{{ providers | dict2items | selectattr('key', 'in', provider_filter) | list }}"
+  when: provider_filter is defined and provider_filter | length > 0
+
+- name: Use full provider list (no filter)
+  set_fact:
+    provider_dict: "{{ providers | dict2items }}"
+  when: provider_filter is not defined or provider_filter | length == 0
+
+- name: Create the data center list
+  set_fact:
+    data_center_list: "{{ provider_dict | subelements('value.data_centers') }}"
+
+- name: Ping each data center
+  shell: ping -c "{{ ping_config.packet_count }}" -i "{{ ping_config.packet_wait }}" "{{ data_center.1.domain }}"
+  loop: "{{ data_center_list }}"
+  loop_control:
+    loop_var: data_center
+    label: "{{ data_center.0.key }} [{{ data_center.1.name }}]"
+  async: "{{ ping_config.timeout }}"
+  poll: 0
+  register: ping_jobs
+
+- name: Waiting for async pings to complete
+  async_status:
+    jid: "{{ ping.ansible_job_id }}"
+  register: async_poll_result
+  until: async_poll_result.finished
+  retries: "{{ ping_config.timeout }}"
+  delay: 1
+  loop: "{{ ping_jobs.results }}"
+  loop_control:
+    loop_var: ping
+    label: "{{ ping.data_center.0.key }} [{{ ping.data_center.1.name }}]"

@@ -1,0 +1,7 @@
+---
+provider_filter: []
+
+ping_config:
+  packet_count: 25
+  packet_wait: 0.2
+  timeout: 30
