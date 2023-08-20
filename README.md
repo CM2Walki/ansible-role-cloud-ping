@@ -1,7 +1,7 @@
+**[WIP] This role is a work in progress.**
+
 Role Name
 =========
-
-[WIP] This role is a work in progress.
 
 datacenter-ping uses `ansible.netcommon.net_ping` to determine the datacenter if the lowest average ping to the executing host.
 
